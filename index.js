@@ -4,10 +4,10 @@ const axios = require('axios');
 const app = express();
 
 app.get('/', async function (req, res) {
-    const response = await axios.get('https://viacep.com.br/ws/88130500/json/');
-    const cep = response.data;
+    const response = await axios.get('https://rickandmortyapi.com/api/character');
+    const charactersRickAndMorty = response.data;
 
-     res.json(cep);
+     res.json(charactersRickAndMorty);
   
 });
 
